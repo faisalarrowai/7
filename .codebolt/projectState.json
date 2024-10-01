@@ -1,3 +1,364 @@
 {
-  "activeAgent": false
+  "activeAgent": {
+    "longDescription": "A basic agent designed for the Codebolt platform, offering a range of\nfunctionalities to enhance interaction with the platform.\n",
+    "metadata": {
+      "sdlc_steps_managed": [
+        {
+          "example_instructions": [
+            "create website"
+          ],
+          "name": "deployment"
+        }
+      ],
+      "defaultagentllm": {
+        "strict": true,
+        "modelorder": [
+          "ollama2"
+        ]
+      },
+      "llm_role": [
+        {
+          "name": "documentationllm",
+          "description": "LLM to be used for advanced Documentation. Please select a model that excels in documentation tasks.",
+          "strict": true,
+          "modelorder": [
+            "gpt-4-turbo",
+            "gpt-3.5-turbo",
+            "mistral7b.perplexity",
+            "mistral7b.any",
+            "llama2-70b",
+            "llama2-15b",
+            "group.documentationmodels"
+          ]
+        },
+        {
+          "name": "testingllm",
+          "description": "LLM to be used for advanced Testing. Please select a model that excels in testing tasks.",
+          "strict": true,
+          "modelorder": [
+            "gpt-4-turbo",
+            "gpt-3.5-turbo",
+            "mistral7b.perplexity",
+            "mistral7b.any",
+            "llama2-70b",
+            "llama2-15b",
+            "group.testingmodels"
+          ]
+        },
+        {
+          "name": "actionllm",
+          "description": "LLM to be used for executing advanced actions.",
+          "strict": true,
+          "modelorder": [
+            "gpt-4-turbo",
+            "gpt-3.5-turbo",
+            "mistral7b.perplexity",
+            "mistral7b.any",
+            "llama2-70b",
+            "llama2-15b",
+            "group.actionmodels"
+          ]
+        }
+      ],
+      "agent_routing": {
+        "worksonblankcode": true,
+        "supportedframeworks": [
+          "html"
+        ],
+        "supportedlanguages": [
+          "web"
+        ],
+        "worksonexistingcode": false
+      }
+    },
+    "unique_id": "codebolt_dev",
+    "createdByUser": "ravi",
+    "author": "codebolt",
+    "description": "Codebolt Dev, is  a highly skilled software developer with extensive knowledge in many programming languages, frameworks, design patterns, and best practices.",
+    "title": "CodeBolt Dev",
+    "initial_message": "Codebolt Dev, is a highly skilled software developer with extensive knowledge in many programming languages, frameworks, design patterns, and best practices",
+    "tags": [
+      "web",
+      "code-generation"
+    ],
+    "avatarSrc": "https://placehold.co/200x200",
+    "id": "6dd799b5-43c2-4c55-ba49-cae6cbac2498",
+    "avatarFallback": "CE",
+    "actions": [
+      {
+        "detailDescription": "more detailed description",
+        "name": "Execute",
+        "description": "Executes the given task.",
+        "actionPrompt": "Please create website"
+      }
+    ],
+    "slug": "6dd799b543c24c55ba49cae6cbac2498",
+    "status": 0,
+    "zipFilePath": "https://storage.googleapis.com/codeboltai.appspot.com/agents/TCXgmLyZ8q.zip"
+  },
+  "modeLayout": {
+    "layout": {
+      "grid": {
+        "root": {
+          "type": "branch",
+          "data": [
+            {
+              "type": "branch",
+              "data": [
+                {
+                  "type": "leaf",
+                  "data": {
+                    "views": [
+                      "Code"
+                    ],
+                    "activeView": "Code",
+                    "id": "4"
+                  },
+                  "size": 341
+                },
+                {
+                  "type": "leaf",
+                  "data": {
+                    "views": [
+                      "Chat"
+                    ],
+                    "activeView": "Chat",
+                    "id": "5"
+                  },
+                  "size": 341
+                },
+                {
+                  "type": "branch",
+                  "data": [
+                    {
+                      "type": "leaf",
+                      "data": {
+                        "views": [
+                          "Preview",
+                          "Git",
+                          "Planner",
+                          "Browser",
+                          "Console"
+                        ],
+                        "activeView": "Console",
+                        "id": "6"
+                      },
+                      "size": 306
+                    },
+                    {
+                      "type": "leaf",
+                      "data": {
+                        "views": [
+                          "Debug",
+                          "Terminal"
+                        ],
+                        "activeView": "Terminal",
+                        "id": "7"
+                      },
+                      "size": 306
+                    }
+                  ],
+                  "size": 342
+                }
+              ],
+              "size": 612
+            }
+          ],
+          "size": 1024
+        },
+        "width": 1024,
+        "height": 612,
+        "orientation": "VERTICAL"
+      },
+      "panels": {
+        "Code": {
+          "id": "Code",
+          "contentComponent": "Code",
+          "title": "Code",
+          "renderer": "always"
+        },
+        "Chat": {
+          "id": "Chat",
+          "contentComponent": "Chat",
+          "title": "Chat",
+          "renderer": "always"
+        },
+        "Preview": {
+          "id": "Preview",
+          "contentComponent": "Preview",
+          "title": "Preview",
+          "renderer": "always"
+        },
+        "Git": {
+          "id": "Git",
+          "contentComponent": "Git",
+          "title": "Git",
+          "renderer": "always"
+        },
+        "Planner": {
+          "id": "Planner",
+          "contentComponent": "Planner",
+          "title": "Planner",
+          "renderer": "always"
+        },
+        "Browser": {
+          "id": "Browser",
+          "contentComponent": "Browser",
+          "title": "Browser",
+          "renderer": "always"
+        },
+        "Console": {
+          "id": "Console",
+          "contentComponent": "Console",
+          "title": "Console",
+          "renderer": "always"
+        },
+        "Debug": {
+          "id": "Debug",
+          "contentComponent": "Debug",
+          "title": "Debug",
+          "renderer": "always"
+        },
+        "Terminal": {
+          "id": "Terminal",
+          "contentComponent": "Terminal",
+          "title": "Terminal",
+          "renderer": "always"
+        }
+      },
+      "activeGroup": "7"
+    },
+    "name": "powerDev"
+  },
+  "currentLayout": {
+    "grid": {
+      "root": {
+        "type": "branch",
+        "data": [
+          {
+            "type": "branch",
+            "data": [
+              {
+                "type": "leaf",
+                "data": {
+                  "views": [
+                    "Code"
+                  ],
+                  "activeView": "Code",
+                  "id": "4"
+                },
+                "size": 426
+              },
+              {
+                "type": "leaf",
+                "data": {
+                  "views": [
+                    "Chat"
+                  ],
+                  "activeView": "Chat",
+                  "id": "5"
+                },
+                "size": 426
+              },
+              {
+                "type": "branch",
+                "data": [
+                  {
+                    "type": "leaf",
+                    "data": {
+                      "views": [
+                        "Preview",
+                        "Git",
+                        "Planner",
+                        "Browser",
+                        "Console"
+                      ],
+                      "activeView": "Preview",
+                      "id": "6"
+                    },
+                    "size": 306
+                  },
+                  {
+                    "type": "leaf",
+                    "data": {
+                      "views": [
+                        "Debug",
+                        "Terminal"
+                      ],
+                      "activeView": "Terminal",
+                      "id": "7"
+                    },
+                    "size": 306
+                  }
+                ],
+                "size": 428
+              }
+            ],
+            "size": 612
+          }
+        ],
+        "size": 1280
+      },
+      "width": 1280,
+      "height": 612,
+      "orientation": "VERTICAL"
+    },
+    "panels": {
+      "Code": {
+        "id": "Code",
+        "contentComponent": "Code",
+        "title": "Code",
+        "renderer": "always"
+      },
+      "Chat": {
+        "id": "Chat",
+        "contentComponent": "Chat",
+        "title": "Chat",
+        "renderer": "always"
+      },
+      "Preview": {
+        "id": "Preview",
+        "contentComponent": "Preview",
+        "title": "Preview",
+        "renderer": "always"
+      },
+      "Git": {
+        "id": "Git",
+        "contentComponent": "Git",
+        "title": "Git",
+        "renderer": "always"
+      },
+      "Planner": {
+        "id": "Planner",
+        "contentComponent": "Planner",
+        "title": "Planner",
+        "renderer": "always"
+      },
+      "Browser": {
+        "id": "Browser",
+        "contentComponent": "Browser",
+        "title": "Browser",
+        "renderer": "always"
+      },
+      "Console": {
+        "id": "Console",
+        "contentComponent": "Console",
+        "title": "Console",
+        "renderer": "always"
+      },
+      "Debug": {
+        "id": "Debug",
+        "contentComponent": "Debug",
+        "title": "Debug",
+        "renderer": "always"
+      },
+      "Terminal": {
+        "id": "Terminal",
+        "contentComponent": "Terminal",
+        "title": "Terminal",
+        "renderer": "always"
+      }
+    },
+    "activeGroup": "7"
+  }
 }

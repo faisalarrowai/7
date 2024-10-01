@@ -1,12 +1,12 @@
-
+import React from 'react';
+import Clock from './components/Clock';
 
 function App() {
-
   return (
     <div className='flex items-center justify-center flex-col'>
-    CodeBolt Template
+      <Clock />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
